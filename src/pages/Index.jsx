@@ -85,7 +85,7 @@ const Index = () => {
         </Box>
         <List spacing={3}>
           {events.map((event, index) => (
-            <ListItem key={index} p={3} boxShadow="md">
+            <ListItem key={`event-${index}`} p={3} boxShadow="md">
               <Heading size="md">{event.name}</Heading>
               <Text>{event.description}</Text>
               <IconButton aria-label="Edit" icon={<FaEdit />} onClick={() => handleEdit(index)} />
